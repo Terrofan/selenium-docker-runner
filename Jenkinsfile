@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage("Run Test"){
             steps{
-                bat "docker compose up"
+                bat "docker compose up -d hub chrome firefox"
+                bat "docker compose up search-module book-flight-module"
             }
         }
         stage("Bring down"){
