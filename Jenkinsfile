@@ -2,7 +2,9 @@ pipeline{
 	agent any
     stages{
         stage("Pull Latest Image"){
-            bat "docker pull terrofan/selenium-docker"
+            steps{
+                bat "docker pull terrofan/selenium-docker"
+            }
         }
         stage("Start Grid"){
             steps{
