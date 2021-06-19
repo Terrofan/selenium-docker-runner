@@ -6,7 +6,7 @@ pipeline{
                 bat "docker compose up"
             }
         }
-        stage("Run Test"){
+        stage("Bring down"){
             steps{
                 bat "docker compose down"
             }
